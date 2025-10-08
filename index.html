@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio-Proyecto Mesa Central</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="LogoMesaCentral" class="logoMesa">
+            <div class="title-container">
+                <h1>Proyecto Mesa Central</h1>
+                <P>Instituto de Geología UNAM</P>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Team.html">Equipo de Trabajo</a></li>
+            <li><a href="Research.html">Investigación</a></li>
+            <li><a href="Teaching.html">Enseñanza</a></li>
+            <li><a href="Facilities.html">Instalaciones</a></li>
+            <li><a href="Contact.html">Contacto</a></li>
+            <li><a href="field-camps.html">Campañas de campo</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <section class="carrusel-section">
+            <div class="carrusel-container">
+                <div class="carrusel-slide fade">
+                    <img src="assets/images/carrusel/images1.jpg" alt="images1">
+                    <div class="carrusel-caption">
+                        <h2>Bienvenido a la página sobre el proyecto de la Mesa Central</h2>
+                        <p>Esta es una página que concentra toda la información desarrollada en el IGL sobre la mesa central</p>
+                    </div>
+                </div>
+                <div class="carrusel-slide fade">
+                    <a href="Contact.html">
+                    <img src="assets/images/carrusel/images2.jpg" alt="images2">
+                    <div class="carrusel-caption">
+                        <h2>¡Contactanos!</h2>
+                        <p>Estaremos encantados de escuchar sobre colaboraciones</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="carrusel-slide fade">
+                    <a href="field-camps.html">
+                    <img src="assets/images/carrusel/images3.jpg" alt="images3">
+                    <div class="carrusel-caption">
+                        <h2>Campañas de campo</h2>
+                        <p>aquí podrás encontrar toda la información recopilada en nuestros más recientes trabajos de campo</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="carrusel-slide fade">
+                    <a href="Team.html">
+                    <img src="assets/images/carrusel/images4.jpg" alt="images4">
+                    <div class="carrusel-caption">
+                        <h2>Equipo</h2>
+                        <p>Este es el equipo de trabajo</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="carrusel-slide fade">
+                    <a href="Teaching.html">
+                    <img src="assets/images/carrusel/images4.jpg" alt="images4">
+                    <div class="carrusel-caption">
+                        <h2>Enseñanza</h2>
+                        <p>Este es el apartado de lo que hacemos en el IGL para la Enseñanza</p>
+                    </div>
+                    </a>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </section>
+        <section class="quienes-somos">
+            <h2>Quiénes Somos</h2>
+            <p>aquí iria la descripción del proyecto xD</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 yopis</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subpage1-Proyecto Mesa Central</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="LogoMesaCentral" class="logoMesa">
+            <div class="title-container">
+                <h1>Proyecto Mesa Central</h1>
+                <P>Instituto de Geología UNAM</P>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Team.html">Equipo de Trabajo</a></li>
+            <li><a href="Research.html">Investigación</a></li>
+            <li><a href="Teaching.html">Enseñanza</a></li>
+            <li><a href="Facilities.html">Instalaciones</a></li>
+            <li><a href="Contact.html">Contacto</a></li>
+            <li><a href="field-camps.html">Campañas de campo</a></li>
+        </ul>
+    </nav>
+    <main>
+        <main class="main-content">
+        <section class="carrusel-section">
+            <div class="carrusel-container">
+                <div class="carrusel-slide fade">
+                    <img src="assets/campo-1/carrusel/images1.jpg" alt="images1">
+                </div>
+                <div class="carrusel-slide fade">
+                    <img src="assets/campo-1/carrusel/images2.jpg" alt="images2">
+                </div>
+                <div class="carrusel-slide fade">
+                    <img src="assets/campo-1/carrusel/images3.jpg" alt="images3">
+                </div>
+                <div class="carrusel-slide fade">
+                    <img src="assets/campo-1/carrusel/images4.jpg" alt="images4">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </section>
+        <section class="field-details-section" data-csv-path="assets/data/PruebaSubpage1.csv">
+            
+            <h1 class="field-title">
+                Campaña de Campo: <span>donde fue</span>
+            </h1>
+            
+            <div class="metadata-bar">
+                <p class="metadata"><i class="fas fa-calendar-alt"></i> **Fecha:** </p>
+                <p class="metadata"><i class="fas fa-users"></i> **Integrantes:** </p>
+            </div>
+            
+            <div class="field-description">
+                <h2>Descripción del Proyecto</h2>
+                <p>aqui va la descripción</p>
+            </div>
+
+        <div class="data-container">
+                <h2 class="data-title">Base de Datos Generada</h2>
+                
+                <p class="data-intro">
+                    A continuación se muestran los primeros 20 registros del set de datos de campo.
+                    <a href="assets/data/PruebaSubpage1.xlsx" class="download-link"><i class="fas fa-download"></i> Descargar archivo completo (.xlsx)</a>
+                </p>
+
+                <div class="data-table-wrapper">
+                    <table class="field-data-table">
+                        <thead>
+                            <tr>
+                                <th>ID Muestra</th>
+                                <th>Latitud</th>
+                                <th>Longitud</th>
+                                <th>Litología</th>
+                                <th>Alteración</th>
+                                <th>metal</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody id="data-table-body">
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="pagination-controls">
+                    <button id="prev-btn">&#10094; Anterior</button> 
+                    <span id="page-status">Página 1 de 5</span>
+                    <button id="next-btn">Siguiente &#10095;</button> 
+                </div>
+                
+                <a href="assets/data/PruebaSubpage1.xlsx" class="btn-download-xlxs" download>
+                    <i class="fas fa-file-excel"></i> Descargar Base de Datos Completa
+                </a>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 yopis</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
