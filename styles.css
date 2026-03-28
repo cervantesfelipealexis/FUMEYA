@@ -251,7 +251,7 @@ h1, h2, h3, .section-title {
     position: relative;
     max-width: 1100px;
     margin: 0 auto 50px auto;
-    height: 400px;
+    height: auto;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -259,9 +259,9 @@ h1, h2, h3, .section-title {
 
 .team-banner img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6); 
+    height: auto; 
+    display: block; 
+    filter: brightness(0.6);
 }
 
 .banner-caption {
