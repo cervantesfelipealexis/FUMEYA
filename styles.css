@@ -8,35 +8,60 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    background-color: #FDA75F;
-    border-bottom: 2px solid #ffffff;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
 }
-.logo-container {
+
+.brand-container {
     display: flex;
     align-items: center;
+    gap: 25px;
+    max-width: 1000px;
+}
+
+.logo-container {
+    height: 90px; 
+    margin-right: 0; 
 }
 .logoMesa {
     height: 60px;
     margin-right: 15px;
 }
-.title-container h1 {
-    font-size: 1.5em;
-    margin: 0;
-    color: #000000;
+
+.title-container {
+    text-align: left;
+    border-left: 2px solid #D4AF37; 
+    padding-left: 20px;
 }
-.title-container p {
-    font-size: 0.9em;
+
+.title-container h1 {
+    font-size: 1.8rem;
     margin: 0;
-    color: #555;
+    color: #003b70;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.title-container p {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .navbar {
-    background-color: #FEE6AA;
-    padding: 10px 0;
+    background-color: #003b70;
+    padding: 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
 }
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -44,15 +69,20 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .navbar a {
-    color: rgb(59, 59, 59);
+    color: #ffffff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 15px 25px;
     display: block;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
+
 .navbar a:hover {
-    background-color: #FF9933;
+    background-color: #D4AF37;
+    color: #003b70;
 }
 
 .carrusel-section {
