@@ -50,7 +50,7 @@ let dynamicDataPath = null;
 //  FUNCIONES CLAVE QUE FALTAN O DEBEN ESTAR INCLUIDAS
 // -----------------------------------------------
 
-// 1. FUNCIÓN PARA MOSTRAR LOS DATOS DE LA PÁGINA ACTUAL
+// FUNCIÓN PARA MOSTRAR LOS DATOS DE LA PÁGINA ACTUAL
 function displayTable(data, wrapper) {
     wrapper.innerHTML = ''; 
 
@@ -61,7 +61,6 @@ function displayTable(data, wrapper) {
     paginatedData.forEach(row => {
         const tr = document.createElement('tr');
         
-        // ¡IMPORTANTE! Asegúrate de que los índices (0 a 5) coincidan con el orden de las columnas de tu CSV.
         tr.innerHTML = `
             <td>${row[0]}</td>
             <td>${row[1]}</td>
@@ -74,7 +73,7 @@ function displayTable(data, wrapper) {
     });
 }
 
-// 2. FUNCIÓN PARA ACTUALIZAR EL ESTADO DE LA PAGINACIÓN Y BOTONES
+// FUNCIÓN PARA ACTUALIZAR EL ESTADO DE LA PAGINACIÓN Y BOTONES
 function setupPagination() {
     const pageCount = Math.ceil(allData.length / rowsPerPage);
     
@@ -87,14 +86,13 @@ function setupPagination() {
         prevButton.disabled = true;
         nextButton.disabled = true;
         pageSpan.textContent = 'No hay datos disponibles.';
-        // Mostrar mensaje en la tabla si falla la carga
         if (tableBody) {
              tableBody.innerHTML = '<tr><td colspan="6" style="text-align: center;">Error o datos vacíos.</td></tr>';
         }
     }
 }
 
-// 3. FUNCIÓN PARA IR A LA PÁGINA SIGUIENTE
+// FUNCIÓN PARA IR A LA PÁGINA SIGUIENTE
 function goToNextPage() {
     const pageCount = Math.ceil(allData.length / rowsPerPage);
     if (currentPage < pageCount) {
@@ -103,8 +101,7 @@ function goToNextPage() {
         setupPagination();
     }
 }
-
-// 4. FUNCIÓN PARA IR A LA PÁGINA ANTERIOR
+// FUNCIÓN PARA IR A LA PÁGINA ANTERIOR
 function goToPrevPage() {
     if (currentPage > 1) {
         currentPage--;
@@ -118,10 +115,9 @@ function goToPrevPage() {
 
 // Función principal de Carga de Datos (Tu código actual - sin cambios)
 function loadData() {
-    // ⚠️ Usamos la ruta dinámica que obtuvimos en DOMContentLoaded
     if (!dynamicDataPath) {
         console.error("Ruta del archivo CSV no encontrada en el HTML.");
-        setupPagination(); // Llama a setup para mostrar el mensaje de error si no hay ruta
+        setupPagination(); 
         return; 
     }
 
@@ -130,7 +126,6 @@ function loadData() {
         header: false, 
         skipEmptyLines: true,
         complete: function(results) {
-            // Eliminar la primera fila si contiene los encabezados
             results.data.shift(); 
             
             allData = results.data;
@@ -155,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dynamicDataPath = detailsSection.getAttribute('data-csv-path');
     }
     
-    // 2. Inicializar referencias DOM
+    //  Inicializar referencias DOM
     tableBody = document.getElementById('data-table-body');
     prevButton = document.getElementById('prev-btn');
     nextButton = document.getElementById('next-btn');
@@ -167,5 +162,31 @@ document.addEventListener('DOMContentLoaded', () => {
         nextButton.addEventListener('click', goToNextPage);
         
         loadData(); // Llama a la carga con la ruta dinámica
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const feedContainer = document.getElementById("teaching-feed");
+
+    if (feedContainer) {
+        fetch("enseñanza.json")
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(item => {
+                    const card = `
+                        <div class="activity-card">
+                            <img src="${item.imagen}" alt="${item.titulo}">
+                            <div class="card-content">
+                                <span class="date" style="color: #D4AF37; font-weight: bold;">[ ${item.categoria} ] - ${item.fecha}</span>
+                                <h3>${item.titulo}</h3>
+                                <p class="description">${item.descripcion}</p>
+                                <a href="${item.link}" class="read-more">Ver detalles</a>
+                            </div>
+                        </div>
+                    `;
+                    feedContainer.innerHTML += card;
+                });
+            })
+            .catch(error => console.error("Error cargando el feed:", error));
     }
 });
