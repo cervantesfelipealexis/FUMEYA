@@ -118,12 +118,9 @@ carrusel-container {
     bottom: 0;
     left: 0;
     width: 100%;
-    transform: none; 
-    color: white;
-    text-align: left; 
-    z-index: 10; 
-    padding: 40px 60px; 
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    padding: 60px 80px; 
+    text-align: left;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
     box-sizing: border-box;
 }
 
@@ -138,31 +135,13 @@ carrusel-container {
 }
 
 .carrusel-caption p {
-    font-size: 1.25em;
-    margin: 0;
-    font-weight: 300;
-    max-width: 700px;
-    line-height: 1.5;
-    color: #e0e0e0;
+    max-width: 600px; 
+    margin-top: 10px;
 }
 
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); 
-    width: auto;
-    padding: 20px 15px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
+    opacity: 0.5; 
     transition: all 0.3s ease;
-    border-radius: 50%;
-    user-select: none;
-    background-color: rgba(255,255,255,0.1); 
-    border: 1px solid rgba(255,255,255,0.2);
-    margin: 0 20px; 
-    z-index: 20;
 }
 
 .next {
@@ -181,9 +160,13 @@ carrusel-container {
 
 .dot-container {
     text-align: center;
-    margin-top: -35px;
-    position: relative;
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100%;
     z-index: 15;
+    margin-top: 0;
 }
 
 .dot {
