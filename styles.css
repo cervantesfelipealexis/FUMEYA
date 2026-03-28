@@ -233,12 +233,46 @@ h1, h2, h3, .section-title {
 }
 
 .quienes-somos {
-    background-color: #f9f9f9;
-    padding: 40px;
-    margin: 20px 0;
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin: 0; 
     text-align: center;
 }
 
+.quienes-somos .field-description {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #444;
+}
+
+.quienes-somos p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+}
+
+.quienes-somos strong {
+    color: #003b70;
+}
+
+.quienes-somos ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.quienes-somos li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.quienes-somos li::before {
+    content: "⛏";
+    position: absolute;
+    left: 0;
+    color: #D4AF37;
+}
 
 .footer {
     background-color: #333;
@@ -342,25 +376,6 @@ h1, h2, h3, .section-title {
 .team-member .bio {
     font-size: 0.9em;
     color: #555;
-}
-
-.contact-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-.contact-intro {
-    font-size: 1.1em;
-    color: #ffd900;
-    margin-bottom: 40px;
-}
-
-.contact-info a {
-    color: #51ff00;
-    text-decoration: none;
-}
-.contact-info a:hover {
-    text-decoration: underline;
 }
 
 .activities-section {
@@ -541,7 +556,7 @@ h1, h2, h3, .section-title {
 
 /* Link de descarga dentro del texto introductorio */
 .data-intro .download-link {
-    color: #1e7e34; /* Color verde para descarga */
+    color: #1e7e34;
     text-decoration: none;
     font-weight: bold;
     margin-left: 15px;
