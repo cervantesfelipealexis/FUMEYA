@@ -197,7 +197,7 @@ h1, h2, h3, .section-title {
     bottom: 5px;
     width: 100%;
     text-align: center;
-    z-index: 20;
+    z-index: 2;
 }
 
 .dot {
