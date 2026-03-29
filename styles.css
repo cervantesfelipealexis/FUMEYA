@@ -194,11 +194,11 @@ h1, h2, h3, .section-title {
 
 .dot-container {
     position: absolute;
-    bottom: 15px;      
-    right: 30px;       
+    bottom: 20px;      
+    right: 20px;       
     width: auto;       
-    text-align: right; 
-    z-index: 30;       
+    text-align: left; 
+    z-index: 50;       
     line-height: 0;
 }
 
